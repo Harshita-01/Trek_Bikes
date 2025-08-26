@@ -1,25 +1,16 @@
-# Trek_Bikes
-Trek_Bikes Automation Framework
+*Trek_Bikes Automation Framework
 This is a Selenium + Cucumber based automation framework created to test the Guru99 demo website.
 The framework follows the Page Object Model (POM) design pattern.
 
 🛠 Tech Stack
-Java (JDK 11 or higher)
-
-Selenium WebDriver
-
-Cucumber (BDD)
-
-JUnit / TestNG
-
-Maven (dependency management)
-
-Brave / Edge / Chrome browser support
+1. Java (JDK 11 or higher)
+2. Selenium WebDriver
+3. Cucumber (BDD)
+4. JUnit / TestNG
+5. Maven (dependency management)
+6. Brave / Edge / Chrome browser support
 
 📂 Project Structure
-bash
-Copy
-Edit
 Trek_Bikes
 │── pom.xml                 # Maven dependencies
 │── src
@@ -31,84 +22,27 @@ Trek_Bikes
 │       │   └── runners           # Test runners
 │       └── resources
 │           └── features          # Cucumber feature files
+
 ⚙️ Setup Instructions
-Clone the repository
+1. Clone the repository
+   git clone https://github.com/<your-username>/Trek_Bikes.git
+   cd Trek_Bikes
+2. Install dependencies
+   mvn clean install
+3. Browser Driver Setup
+4. Running Tests
+   to run all tests: mvn test
+   to run specific tests: mvn test -Dcucumber.filter.tags="@payment"
+5. Example Test Scenarios
+   Payment Feature
+      Navigate to payment page
+      Enter card details (card number, expiry, cvv)
+      Verify successful payment message
+   Telecom Feature
+      Create a customer
+      Verify success message
 
-bash
-Copy
-Edit
-git clone https://github.com/<your-username>/Trek_Bikes.git
-cd Trek_Bikes
-Install dependencies
-Make sure Maven is installed and run:
-
-bash
-Copy
-Edit
-mvn clean install
-Browser Driver Setup
-
-Default: ChromeDriver
-
-Brave (example):
-
-java
-Copy
-Edit
-ChromeOptions options = new ChromeOptions();
-options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
-WebDriver driver = new ChromeDriver(options);
-Edge: Replace with EdgeDriver where needed.
-
-▶️ Running Tests
-Run all tests:
-
-bash
-Copy
-Edit
-mvn test
-Run tests by tag:
-
-bash
-Copy
-Edit
-mvn test -Dcucumber.filter.tags="@payment"
-🧪 Example Test Scenarios
-Payment Feature
-
-Navigate to payment page
-
-Enter card details (card number, expiry, cvv)
-
-Verify successful payment message
-
-Telecom Feature
-
-Create a customer
-
-Verify success message
-
-✅ Reports
-After execution, reports are generated in:
-
-bash
-Copy
-Edit
-target/cucumber-reports/
-🙌 Contribution
-Feel free to fork this repo and raise PRs with improvements like:
-
-Adding new test cases
-
-Enhancing page objects
-
-Improving CI/CD integration
-
-📌 Notes
-Ensure you are connected to the internet (Guru99 site is external).
-
-Use valid browser drivers in your PATH.
-
-Tested on Java 11, Maven 3.9, Chrome 115+.
+6. ✅ Reports
+   after execution, reports are generated in target/cucumber-reports/
 
 👩‍💻 Author: Harshita
